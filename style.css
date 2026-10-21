@@ -1,0 +1,255 @@
+/* General page */
+body {
+    background-color: #f3f5f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar */
+.top-bar {
+    background-color: #087bff;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Main white box */
+main {
+    max-width: 800px;
+    width: calc(100% - 30px);
+    margin: 30px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px #dddddd;
+    box-sizing: border-box;
+}
+
+/* Heading */
+.section-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.projects p {
+    text-align: center;
+    color: #777777;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+/* Input and Add Task button */
+#taskForm {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    align-items: stretch;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #cccccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 12px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #087bff;
+}
+
+.add-btn {
+    height: 40px;
+    padding: 0 18px;
+    background-color: #087bff;
+    color: white;
+    border: 1px solid #087bff;
+    border-radius: 0 5px 5px 0;
+    font-size: 12px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.add-btn:hover {
+    background-color: #0668d9;
+    color: white;
+}
+
+/* Error message */
+#message {
+    color: #dc2626;
+    font-size: 12px;
+    margin: 8px 0 0;
+}
+
+/* Your tasks heading */
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #626262;
+}
+
+.remaining {
+    background-color: #087bff;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+/* All, Active and Completed buttons */
+.filters {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.filter-btn {
+    flex: 1;
+    min-width: 0;
+    padding: 9px 5px;
+    border: 1px solid #087bff;
+    background-color: white;
+    color: #087bff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.filter-btn + .filter-btn {
+    border-left: none;
+}
+
+.filter-btn:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.filter-btn:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.filter-btn.active {
+    background-color: #087bff;
+    color: white;
+}
+
+/* Task list */
+#taskList {
+    margin-top: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.task-item input[type="checkbox"] {
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-name {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+    color: #333333;
+}
+
+.task-item.done .task-name {
+    text-decoration: line-through;
+    color: #999999;
+}
+
+/* Delete button */
+.delete-btn {
+    padding: 5px 9px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff4055;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background-color: #dc263d;
+}
+
+/* No tasks message */
+.empty-message {
+    text-align: center;
+    color: #888888;
+    font-size: 12px;
+    padding: 18px 5px;
+    margin: 0;
+}
+
+/* Clear Completed button */
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+#clearBtn {
+    padding: 7px 10px;
+    background-color: white;
+    color: #ff4055;
+    border: 1px solid #ff4055;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+#clearBtn:hover {
+    background-color: #fff0f1;
+}
+
+/* Mobile screen */
+@media (max-width: 576px) {
+    main {
+        margin: 20px auto;
+        padding: 20px 15px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .add-btn {
+        padding: 0 12px;
+    }
+
+    .task-item {
+        gap: 8px;
+        padding: 8px;
+    }
+}
